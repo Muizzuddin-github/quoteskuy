@@ -36,7 +36,7 @@ endpoint tersebut adalah kategori yang quoteskuy berikan dan anda akan mendapatk
 
 untuk responsenya sebagai berikut
 
-**GET**
+GET
 
 {
     "data": {
