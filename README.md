@@ -27,16 +27,16 @@ anda akan memperoleh quote acak dalam bentuk JSON dan sebagai contoh berikut ini
 }
 ```
 
-/api/quotes/islam
-/api/quotes/motivasi
-/api/quotes/pendidikan
-/api/quotes/novel
+* /api/quotes/islam
+* /api/quotes/motivasi
+* /api/quotes/pendidikan
+* /api/quotes/novel
 
 endpoint tersebut adalah kategori yang quoteskuy berikan dan anda akan mendapatkan data secara spesifik sesuai dengan kategori yang ada berikan pada parameternya
 
 untuk responsenya sebagai berikut
 
-GET
+### GET
 
 {
     "data": {
