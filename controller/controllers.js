@@ -1,4 +1,4 @@
-import mongo from "../database/schemaQuotes.js"
+import mongo from '../model/schemaQuotes.js'
 
 
 // handle response route
