@@ -27,7 +27,7 @@ anda akan memperoleh quote acak dalam bentuk JSON dan sebagai contoh berikut ini
 }
 ```
 
-### kategori
+### Kategori
 
 * /api/quotes/islam
 * /api/quotes/motivasi
@@ -57,7 +57,7 @@ https://quoteskuy-65d4.vercel.app/api/quotes
 
 
 
-## dibuat oleh ##
+## Dibuat oleh ##
 Muhammad Mu'izzuddin 
 
 akun sosial media saya - https://www.instagram.com/mzdn404/?hl=id
