@@ -9,7 +9,7 @@ Quoteskuy adalah sebuah rest api yang dibangun dengan menggunakan node dimana qu
 ## API server endpoint ##
 semua response yang diberikan berupa JSON. ingat,pengambilan data dari database tidak case sensitif, jadi huruf kecil dan besar tidak berpengaruh terhadap endpoint 
 
-### GET
+#### GET
 
 /api/quotes
 
