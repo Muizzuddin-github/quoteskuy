@@ -40,6 +40,7 @@ untuk responsenya sebagai berikut
 
 ### GET
 
+```
 {
     "data": {
         "kategori": "novel",
