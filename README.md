@@ -15,11 +15,13 @@ semua response yang diberikan berupa JSON. ingat,pengambilan data dari database 
 
 anda akan memperoleh quote acak dalam bentuk JSON dan sebagai contoh berikut ini adalah responsenya 
 
-```
+```javascript
 fetch('https://quoteskuy-65d4.vercel.app/api/quotes')
  .then(res => res.json())
  .then(quotes => console.log(quotes))
+```
 
+```json
 {
     "data": {
         "kategori": "islam",
@@ -42,7 +44,7 @@ beberapa endpoint diatas adalah kategori yang Quoteskuy berikan dan anda akan me
 
 untuk responsenya sebagai berikut
 
-```
+```json
 {
     "data": {
         "kategori": "novel",
