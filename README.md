@@ -53,7 +53,7 @@ untuk responsenya sebagai berikut
 ## Cobalah ##
 sebagai percobaan anda dapat mengaksesnya pada url berikut ini
 
-https://quoteskuy-65d4.vercel.app/api/qotes
+https://quoteskuy-65d4.vercel.app/api/quotes
 
 
 
