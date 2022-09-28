@@ -34,7 +34,7 @@ anda akan memperoleh quote acak dalam bentuk JSON dan sebagai contoh berikut ini
 * /api/quotes/pendidikan
 * /api/quotes/novel
 
-endpoint tersebut adalah kategori yang quoteskuy berikan dan anda akan mendapatkan data secara spesifik sesuai dengan kategori yang ada berikan pada parameternya
+beberapa endpoint diatas adalah kategori yang Quoteskuy berikan dan anda akan mendapatkan data secara spesifik sesuai dengan kategori yang ada berikan
 
 untuk responsenya sebagai berikut
 
