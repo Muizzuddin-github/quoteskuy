@@ -1,6 +1,5 @@
 import mongo from '../model/schemaQuotes.js'
 
-
 // handle response route
 
 export const getRandom = async (req,res) => {
@@ -40,8 +39,6 @@ export const randomKategori = async (req,res) => {
         ])
 
         if(!data.length) return res.status(404).json({msg : "not found"})
-
-
         return res.status(200).json({data : data[0]})
 
     }catch(err){
