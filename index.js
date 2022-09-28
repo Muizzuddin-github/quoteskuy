@@ -3,15 +3,12 @@ import router from './routes/route.js'
 import mongoose from 'mongoose'
 import cors from 'cors'
 import dotenv from 'dotenv'
-
-
+dotenv.config()
 
 const app  = express()
 
-dotenv.config()
 app.use(cors()) // can be accessed outside the domain
-
-const port = process.env.PORT || 3000 || 9001 || 5000
+const port = process.env.PORT
 
 // check mongodb connection
 app.use(async function(req,res,next){
@@ -25,9 +22,9 @@ app.use(async function(req,res,next){
 
 })
 
-app.use('/quotes',router)
+app.use('/api/quotes',router)
 app.use(function(req,res){
     res.status(404).json({msg : 'not found'})
 })
 
-app.listen(process.env.PORT)
+app.listen(port)
