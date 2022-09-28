@@ -9,7 +9,7 @@ Quoteskuy adalah sebuah rest api yang dibangun dengan menggunakan node dimana qu
 ## API server endpoint ##
 semua response yang diberikan berupa JSON. ingat,pengambilan data dari database tidak case sensitif, jadi huruf kecil dan besar tidak berpengaruh terhadap endpoint 
 
-*GET*
+**GET**
 
 /api/quotes
 
@@ -58,7 +58,7 @@ https://quoteskuy-65d4.vercel.app/api/qotes
 ## dibuat oleh ##
 Muhammad Mu'izzuddin 
 
-akun sosial media saya  <kbd>→F</kbd> https://www.instagram.com/mzdn404/?hl=id
+akun sosial media saya - https://www.instagram.com/mzdn404/?hl=id
 
 ## LICENSE ##
 anda dapat gunakan secara gratis
