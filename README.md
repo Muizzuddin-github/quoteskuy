@@ -11,7 +11,7 @@ semua response yang diberikan berupa JSON. ingat,pengambilan data dari database 
 
 ### GET
 
-/api/quotes
+* /api/quotes
 
 anda akan memperoleh quote acak dalam bentuk JSON dan sebagai contoh berikut ini adalah responsenya 
 
