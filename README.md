@@ -9,9 +9,7 @@ Quoteskuy adalah sebuah rest api yang dibangun dengan menggunakan node dimana qu
 ## API server endpoint ##
 semua response yang diberikan berupa JSON. ingat,pengambilan data dari database tidak case sensitif, jadi huruf kecil dan besar tidak berpengaruh terhadap endpoint 
 
-```
 GET
-```
 
 /api/quotes
 
@@ -38,7 +36,8 @@ endpoint tersebut adalah kategori yang quoteskuy berikan dan anda akan mendapatk
 
 untuk responsenya sebagai berikut
 
-```
+**GET**
+
 {
     "data": {
         "kategori": "novel",
