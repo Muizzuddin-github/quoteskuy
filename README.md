@@ -63,4 +63,4 @@ Muhammad Mu'izzuddin
 akun sosial media saya - https://www.instagram.com/mzdn404/?hl=id
 
 ## LICENSE ##
-anda dapat menggunakan quoteskuy secara gratis
+anda dapat menggunakan Quoteskuy secara gratis
