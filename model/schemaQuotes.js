@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// schema database
+// schema collection quotes
 
 const schemaEmbed = mongoose.Schema({
     'quote' : String,
@@ -12,5 +12,5 @@ const schemaQuotes = mongoose.Schema({
     'quotes' : [schemaEmbed]
 })
 
-const mongo =  mongoose.model('quotes',schemaQuotes,'quotes')
-export default mongo
+const MongoQuote =  mongoose.model('quotes',schemaQuotes,'quotes')
+export default MongoQuote

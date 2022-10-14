@@ -9,7 +9,7 @@ Quoteskuy adalah sebuah rest api yang dibangun dengan menggunakan node dimana qu
 ## API server endpoint ##
 semua response yang diberikan berupa JSON. ingat,pengambilan data dari database tidak case sensitif, jadi huruf kecil dan besar tidak berpengaruh terhadap endpoint 
 
-### GET
+### Quote acak
 
 * /api/quotes
 
@@ -23,6 +23,7 @@ fetch('https://quoteskuy-65d4.vercel.app/api/quotes')
 
 ```json
 {
+    "msg" : "success",
     "data": {
         "kategori": "islam",
         "quotes": {
@@ -46,11 +47,39 @@ untuk responsenya sebagai berikut
 
 ```json
 {
+    "msg" : "success",
     "data": {
         "kategori": "novel",
             "quotes": {
             "quote": "Bersabar dan diam lebih baik Jika memang jodoh akan terbuka sendiri jalan terbaiknya Jika tidak, akan diganti dengan orang yang lebih baik",
             "author": "Rindu, Tere Liye"
+        }
+    }
+}
+```
+
+### Quote hari ini
+
+* /api/quotes/today
+
+anda akan memperoleh quote hari ini, dimana quote hari ini akan melakukan reset quote setiap hari secara otomatis pada saat melakukan request
+
+untuk responsenya sebagai berikut
+
+```javascript
+fetch('https://quoteskuy-65d4.vercel.app/api/quotes/today')
+ .then(res => res.json())
+ .then(quotes => console.log(quotes))
+```
+
+```json
+{
+    "msg" : "success",
+    "data": {
+        "kategori": "islam",
+        "quotes": {
+            "quote": " Sesungguhnya Allah tidak akan mengubah keadaan suatu kaum hingga mereka merubah keadaan yang ada pada diri mereka sendiri ",
+            "author": "QS Ar Rad: 11"
         }
     }
 }

@@ -17,14 +17,14 @@ app.use(async function(req,res,next){
        await mongoose.connect(process.env.DATABASE_CLIENT)
         next()
     }catch(err){
-        res.status(500).json({msg : err.message})
+        res.status(500).json({msg : err.message,data : {}})
     }
 
 })
 
 app.use('/api/quotes',router)
 app.use(function(req,res){
-    res.status(404).json({msg : 'not found'})
+    res.status(404).json({msg : 'not found',data : {}})
 })
 
 app.listen(port)
