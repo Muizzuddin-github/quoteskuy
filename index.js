@@ -24,7 +24,7 @@ app.use(async function(req,res,next){
 
 app.use('/api/quotes',router)
 app.use(function(req,res){
-    res.status(404).json({msg : 'not found',data : {}})
+    res.status(404).json({msg : 'Not found',data : {}})
 })
 
 app.listen(port)
