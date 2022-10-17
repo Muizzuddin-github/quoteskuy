@@ -11,13 +11,13 @@ export const getRandom = async (req,res) => {
         const appID = req.headers['x-api-id']
         const apikeyUser = req.headers['x-api-key']
 
-        if(!apikeyUser) return res.status(401).json({msg : "Apikey tidak ada"})
+        if(!apikeyUser) return res.status(401).json({msg : "Apikey tidak ada",data : {}})
 
         const checkUser = await MongoUsers.find({_id : appID})
-        if(!checkUser.length) return res.status(404).json({msg : 'App id tidak ditemukan'})
+        if(!checkUser.length) return res.status(404).json({msg : 'App id tidak ditemukan',data : {}})
 
         const checkApiKey = bcrypt.compareSync(apikeyUser,checkUser[0].apikey)
-        if(!checkApiKey) return res.status(401).json({msg : "Apikey yang anda masukkan salah"})
+        if(!checkApiKey) return res.status(401).json({msg : "Apikey yang anda masukkan salah",data : {}})
 
         if(req.query.category){
             const data = await MongoQuote.aggregate([
@@ -59,13 +59,13 @@ export const getTodayQuote = async (req,res) => {
         const appID = req.headers['x-api-id']
         const apikeyUser = req.headers['x-api-key']
 
-        if(!apikeyUser) return res.status(401).json({msg : "Apikey tidak ada"})
+        if(!apikeyUser) return res.status(401).json({msg : "Apikey tidak ada",data : {}})
 
         const checkUser = await MongoUsers.find({_id : appID})
-        if(!checkUser.length) return res.status(404).json({msg : 'App id tidak ditemukan'})
+        if(!checkUser.length) return res.status(404).json({msg : 'App id tidak ditemukan',data : {}})
 
         const checkApiKey = bcrypt.compareSync(apikeyUser,checkUser[0].apikey)
-        if(!checkApiKey) return res.status(401).json({msg : "Apikey yang anda masukkan salah"})
+        if(!checkApiKey) return res.status(401).json({msg : "Apikey yang anda masukkan salah",data : {}})
 
         const dataToday = await MongoToday.aggregate([
             {$project : {__v : 0,"quotes._id" : 0}}
