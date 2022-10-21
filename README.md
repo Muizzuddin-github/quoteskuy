@@ -13,10 +13,19 @@ semua response yang diberikan berupa JSON. ingat,pengambilan data dari database 
 
 * /api/quotes
 
+sebelum anda akan mengakses Quoteskuy, anda harus membuat API ID dan API KEY terlebih dahulu
+anda bisa menunjungi documentasi dari Quoteskuy pada tautan About disebelah kanan
+
 anda akan memperoleh quote acak dalam bentuk JSON dan sebagai contoh berikut ini adalah responsenya 
 
 ```javascript
-fetch('https://quoteskuy-65d4.vercel.app/api/quotes')
+const options = {
+    headers : {
+        "X-API-ID" : "api id",
+        "X-API-KEY" : "api key"
+    }
+}
+fetch('https://quoteskuy-65d4.vercel.app/api/quotes',options)
  .then(res => res.json())
  .then(quotes => console.log(quotes))
 ```
@@ -36,12 +45,15 @@ fetch('https://quoteskuy-65d4.vercel.app/api/quotes')
 
 ### Kategori
 
-* /api/quotes/islam
-* /api/quotes/motivasi
-* /api/quotes/pendidikan
-* /api/quotes/novel
+* islam
+* motivasi
+* pendidikan
+* novel
 
-beberapa endpoint diatas adalah kategori yang Quoteskuy berikan dan anda akan mendapatkan data secara spesifik sesuai dengan kategori yang ada berikan
+anda akan mendapatkan data secara spesifik sesuai dengan kategori yang ada berikan,anda dapat menambahkan query string pada
+url seperti dibawah ini
+
+https://quoteskuy-65d4.vercel.app/api/quotes?category=novel
 
 untuk responsenya sebagai berikut
 
@@ -63,11 +75,16 @@ untuk responsenya sebagai berikut
 * /api/quotes/today
 
 anda akan memperoleh quote hari ini, dimana quote hari ini akan melakukan reset quote setiap hari secara otomatis pada saat melakukan request
-
 untuk responsenya sebagai berikut
 
 ```javascript
-fetch('https://quoteskuy-65d4.vercel.app/api/quotes/today')
+const options = {
+    headers : {
+        "X-API-ID" : "api id",
+        "X-API-KEY" : "api key"
+    }
+}
+fetch('https://quoteskuy-65d4.vercel.app/api/quotes/today',options)
  .then(res => res.json())
  .then(quotes => console.log(quotes))
 ```
@@ -87,6 +104,7 @@ fetch('https://quoteskuy-65d4.vercel.app/api/quotes/today')
 
 ## Cobalah ##
 sebagai percobaan anda dapat mengaksesnya pada url berikut ini
+dan jangan lupa tambahkan API ID dan API KEY
 
 https://quoteskuy-65d4.vercel.app/api/quotes
 
