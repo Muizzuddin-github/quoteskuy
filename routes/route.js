@@ -1,9 +1,8 @@
 import { Router } from "express";
-import { getRandom,getTodayQuote } from "../controller/controllers.js";
-
+import ApiUtils from "../controller/controllers.js";
 const router = Router()
 
-router.get('/',getRandom)
-router.get('/today',getTodayQuote)
+router.get('/',ApiUtils.getRandom)
+router.get('/today',ApiUtils.getTodayQuote)
 
 export default router

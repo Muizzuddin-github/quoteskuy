@@ -8,7 +8,6 @@ dotenv.config()
 const app  = express()
 
 app.use(cors()) // can be accessed outside the domain
-const port = process.env.PORT
 
 // check mongodb connection
 app.use(async function(req,res,next){
@@ -27,4 +26,4 @@ app.use(function(req,res){
     res.status(404).json({msg : 'Not found',data : {}})
 })
 
-app.listen(port)
+app.listen(process.env.PORT)
