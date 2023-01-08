@@ -37,7 +37,7 @@ class Methods{
         return res.status(200).json({msg : "Success",data : singleRandom[0]})
     }
 
-    static async checkTodayDate(res){
+    static async checkTodayDate(res,dataToday){
         const singleRandom = await MongoQuote.aggregate([
             {$unwind : "$quotes"},
             {$sample : {size : 1}},
@@ -125,20 +125,21 @@ class ApiUtils extends Methods{
             const dataToday = await MongoToday.aggregate([
                 {$project : {__v : 0,"quotes._id" : 0}}
             ])
-    
+
+            
             // check length
             if(!dataToday.length){
-               return await super.checkTodayCol(res)
+                return await super.checkTodayCol(res)
             }
-
+            
             const dateNow = new Date()
             const dateQuotes = new Date(dataToday[0].date)
             const getDateDay = `${dateNow.getDate()}-${dateNow.getMonth()}-${dateNow.getFullYear()}`
             const quotesDay =  `${dateQuotes.getDate()}-${dateQuotes.getMonth()}-${dateQuotes.getFullYear()}`
-    
+            
             // check date of day
             if(getDateDay !== quotesDay){
-                return await super.checkTodayDate(res)
+                return await super.checkTodayDate(res,dataToday)
             }
     
             return res.status(200).json({msg : "Success", data : {
